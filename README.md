@@ -50,8 +50,9 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :groups_users
+- has_many :users, through::groups_users
 - has_many :message
+
 
 ## group_userテーブル
 |Column|Type|Options|
