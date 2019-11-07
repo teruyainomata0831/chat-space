@@ -1,0 +1,49 @@
+$bace_color : #ffffff;
+
+.side{
+  &_top{
+    height: 100px;
+    width: 260px;
+    background-color: #253141;
+    padding: 0px 20px;
+    display: flex;
+    color: $bace_color;
+    font-weight: bold;
+    &_name{
+      font-size: 16px;
+      margin: auto 0;
+    }
+    &_icon{
+      margin: auto 0 auto auto;
+    }
+  }
+  &_bottom{
+    height: calc(100vh - 100px);
+    width: 260px;
+    background-color: #2f3e51;
+    font-size: 16px;
+    padding: 0px 20px;
+    color: $bace_color;
+    &_title1{
+      font-size: 15px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      color: $bace_color;
+      font-weight: bold;
+    }
+    &_text1{
+      font-size: 11px;
+      margin-bottom: 20px;
+      color: $bace_color;
+      font-weight: bold;
+    }
+  }
+}
+
+.fas fa-pen-square{
+  color:$bace_color;
+}
+.fas.fa-cog{
+  color:$bace_color;
+
+}
