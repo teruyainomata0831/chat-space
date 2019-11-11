@@ -1,0 +1,25 @@
+.side
+  .side_top
+    .side_top_name
+      teruya_inomata
+    .side_top_icon
+      =link_to new_group_path do
+        = fa_icon 'edit', class: "fas fa-pen-square"
+      =link_to edit_user_path(current_user) do
+        = fa_icon 'cog', class: "fas fa-cog"
+  .side_bottom
+<<<<<<< Updated upstream
+    .side_bottom_title1
+      ahh
+    .side_bottom_text1
+
+    
+=======
+    - current_user.groups.each do |group|
+      .side_bottom_group
+        = link_to group_path(group) do
+          .side_bottom_group_name
+            = group.name
+          .side_bottom_group_message
+            メッセージはまだありません。
+>>>>>>> Stashed changes
