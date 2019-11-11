@@ -24,23 +24,29 @@ $bace_color : #ffffff;
     font-size: 16px;
     padding: 0px 20px;
     color: $bace_color;
-    &_title1{
+    &_group{
       font-size: 15px;
       padding-top: 20px;
       padding-bottom: 5px;
       color: $bace_color;
       font-weight: bold;
-    }
-    &_text1{
-      font-size: 11px;
-      margin-bottom: 20px;
-      color: $bace_color;
-      font-weight: bold;
+      &_name{
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: $bace_color;
+        font-weight: bold;
+      }
+      &_message{
+        font-size: 11px;
+        margin-bottom: 20px;
+        color: $bace_color;
+        font-weight: bold;
+      }
     }
   }
 }
 
-.fas fa-pen-square{
+.fas.fa-pen-square{
   color:$bace_color;
 }
 .fas.fa-cog{
