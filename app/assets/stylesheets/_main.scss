@@ -64,6 +64,7 @@ $sendbtn_color : #38aef0;
     height: 90px;
     padding: 0 40px;
     background-color: #ddd;
+
     &_textbox{
       @include displayflex();
       background-color: #ffffff;
@@ -71,6 +72,7 @@ $sendbtn_color : #38aef0;
       padding: 0 25px;
       height: 50px;
       width: 100%;
+      
       &_text{
         font-size: 16px;
         color: $wordcolor;
@@ -94,3 +96,4 @@ $sendbtn_color : #38aef0;
 .file{
   display: none;
 }
+

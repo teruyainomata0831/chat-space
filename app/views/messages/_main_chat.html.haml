@@ -10,16 +10,14 @@
   .main_center
     .main_center_thread
       .main_center_thread_name
-        フリーランスエンジニアに！！！
-      .main_center_thread_date
-        today
+        = render @messages
   .main_bottom
-    .main_bottom_textbox
-      .main_bottom_textbox_text
-        type a message
-      .main_bottom_textbox_img
-        %label{class: "input-box__image"}
-          %i.fa.fa-image
-            %input{type: "file", class: "file"}
-    .main_bottom_send
-      send
+    = form_for [@group, @message] do |f|
+      .main_bottom_textbox
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message' do
+          .main_bottom_textbox_img
+            = f.label :image, class: 'form__mask__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+      .main_bottom_send
+        = f.submit 'Send', class: 'form__submit'
