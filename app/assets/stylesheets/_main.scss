@@ -37,6 +37,7 @@ $sendbtn_color : #38aef0;
       border: solid 0.3px $topbtn_color;
     }
   }
+
   &_center{
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
@@ -57,40 +58,53 @@ $sendbtn_color : #38aef0;
       }
     }
   }
-  &_bottom{
+
+  &_bottom {
     position: relative;
-    @include displayflex();
+    display: flex;
+    align-items: center;
     bottom: 0;
     height: 90px;
     padding: 0 40px;
     background-color: #ddd;
     &_textbox{
-      @include displayflex();
-      background-color: #ffffff;
-      color: $wordcolor;
+      display: flex;
+      align-items: center;
+      color: #434a54;
       padding: 0 25px;
       height: 50px;
-      width: 100%;
-      &_text{
-        font-size: 16px;
-        color: $wordcolor;
-        padding-left: 10px;
+      width: 100vw;
+      .new_message{
+        display: contents;
+        .form__submit{
+          height: 50px;
+          width: 100px;
+          background-color: lightblue;
+          float: right;
+          margin-right: 400px;
+        }
+        .main_bottom_textbox_img {
+          margin: auto 0px auto auto;
+          background-color: #ddd;
+          .form__mask__image{
+            background-color: #ddd;
+            .hidden{
+              display: none;
+            }
+            .icon{
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              height: 50px;
+            }
+          }
+        }
+        .form__message{
+          height: 50px;
+          width: calc(100vw - 650px);
+        }
       }
-      &_img{
-        margin: auto 0px auto auto;
-        padding: 10px 0px;
-        float: right;
-      }
-    }
-    &_send{
-      margin-left: 20px;
-      padding: 10px 30px;
-      color: black;
-      border: solid 1px $sendbtn_color;
-      background-color: $sendbtn_color;
     }
   }
-}
-.file{
-  display: none;
 }
