@@ -17,6 +17,7 @@ $sendbtn_color : #38aef0;
     padding-left: 40px;
     padding-right: 40px;
     border-bottom: solid #eeeeee;
+    // box-sizing: border-box;
     &_title{
       float: left;
       &_upper{
@@ -41,6 +42,8 @@ $sendbtn_color : #38aef0;
   &_center{
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    // box-sizing: border-box;
     &_thread{
       padding-left: 40px;
       padding-right: 40px;
@@ -65,44 +68,48 @@ $sendbtn_color : #38aef0;
     align-items: center;
     bottom: 0;
     height: 90px;
-    padding: 0 40px;
+    // padding: 0 40px;
     background-color: #ddd;
     &_textbox{
       display: flex;
       align-items: center;
       color: #434a54;
-      padding: 0 25px;
+      padding: 0 40px;
       height: 50px;
       width: 100vw;
+      justify-content: space-between;
       .new_message{
         display: contents;
+        position: relative;
         .form__submit{
           height: 50px;
           width: 100px;
           background-color: #38aef0;
           float: right;
-          margin-right: 400px;
+          margin-right: 0px;
         }
         .main_bottom_textbox_img {
           margin: auto 0px auto auto;
-          background-color: #ddd;
+          position: absolute;
+          right: 170px;
+          // background-color: #ddd;
           .form__mask__image{
             background-color: #ddd;
             .hidden{
               display: none;
             }
             .icon{
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased;
-              height: 50px;
+              // font: normal normal normal 14px/1 FontAwesome;
+              // font-size: inherit;
+              // // text-rendering: auto;
+              // -webkit-font-smoothing: antialiased;
+              // height: 50px;
             }
           }
         }
         .form__message{
           height: 50px;
-          width: calc(100vw - 650px);
+          width: calc(100vw - 500px);
         }
       }
     }
