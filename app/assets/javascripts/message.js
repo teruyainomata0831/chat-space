@@ -35,7 +35,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.main_center').append(html);
-      $('#message_content').val(''); //input内のメッセージを消しています。
+      // $('#message_content').val('');
       $('.main_center').animate({scrollTop: $('.main_center')[0].scrollHeight}, 'swing');
       $('#new_message')[0].reset();
     })
