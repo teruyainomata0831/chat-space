@@ -12,11 +12,6 @@ class MessagesController < ApplicationController
       respond_to do |format|
         format.html{redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
         format.json
-      # redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
-    # else
-    #   @messages = @group.messages.includes(:user)
-    #   flash.now[:alert] = 'メッセージを入力してください。'
-    #   render :index
     end
   end
 end
