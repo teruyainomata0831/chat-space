@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="main_center_thread_name" data-id="${message.id}">
+    var html = `<div class="main_center_thread_name" data-message-id="${message.id}">
                   <div class="main_center_thread_name">
                     <p class="message__detail__current-thread">
                       ${message.user_name}
@@ -19,7 +19,31 @@ $(function(){
                   </p>
                 </div>`
   return html;
+}
+  var reloadMessages = function () {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var last_message_id = $('.message:last').data("message-id");
+      $.ajax({
+        url: "api/messages",
+        type: 'get',
+        dataType: 'json',
+        data: {last_id: last_message_id}
+      })
+      .done(function (messages) {
+        console.log(messages)
+        var insertHTML = '';
+        messages.forEach(function (message) {
+          insertHTML = buildHTML(message);
+          $('.main_center').append(insertHTML);
+        })
+        $('.main_center').animate({scrollTop: $('.main_center')[0].scrollHeight}, 'fast');
+      })
+      .fail(function () {
+        alert('自動更新に失敗しました');
+      });
+    }
   }
+  setInterval(reloadMessages, 7000);
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
