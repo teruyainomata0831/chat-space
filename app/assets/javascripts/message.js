@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
-    var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="main_center_thread_name" data-message-id="${message.id}">
+    var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
+    var html = `<div class="main_center_thread_name" data-m-id="${message.id}">
                   <div class="main_center_thread_name">
                     <p class="message__detail__current-thread">
                       ${message.user_name}
@@ -46,12 +46,12 @@ $(function(){
   setInterval(reloadMessages, 7000);
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var message = new FormData(this);
+    var formData = new FormData(this);
     var url = (window.location.href);
     $.ajax({
       url: url,
       type: 'POST',
-      data: message,
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
