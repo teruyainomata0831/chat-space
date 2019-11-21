@@ -35,6 +35,7 @@ $(function(){
       .done(function (messages) {
         var insertHTML = '';
         messages.forEach(function (message) {
+          // if (Object.keys(message).length !== 0){}
           insertHTML = buildHTML(message);
           $('.main_center').append(insertHTML);
         })
