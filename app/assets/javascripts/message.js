@@ -25,7 +25,6 @@ $(function(){
   var reloadMessages = function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var last_message_id = $('.message:last').data("message-id");
-      console.log(last_message_id);
       $.ajax({
         url: "api/messages",
         type: 'get',
@@ -33,13 +32,14 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function (messages) {
+        if (Object.keys(message).length !== 0){
         var insertHTML = '';
         messages.forEach(function (message) {
-          // if (Object.keys(message).length !== 0){}
           insertHTML = buildHTML(message);
           $('.main_center').append(insertHTML);
         })
         $('.main_center').animate({scrollTop: $('.main_center')[0].scrollHeight}, 'fast');
+      }
       })
       .fail(function () {
         alert('自動更新に失敗しました');

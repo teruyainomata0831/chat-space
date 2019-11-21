@@ -49,10 +49,8 @@ $sendbtn_color : #38aef0;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
     padding-left: 40px;
-    position: sticky;
-    // box-sizing: border-box;
+    // position: sticky;
     &_thread{
-      // padding-left: 40px;
       padding-right: 40px;
       padding-top: 46px;
       display: flex;
@@ -75,7 +73,6 @@ $sendbtn_color : #38aef0;
     align-items: center;
     bottom: 0;
     height: 90px;
-    // padding: 0 40px;
     background-color: #ddd;
     &_textbox{
       display: flex;
