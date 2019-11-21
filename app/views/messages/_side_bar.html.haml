@@ -1,7 +1,7 @@
 .side
   .side_top
     .side_top_name
-      teruya_inomata
+      = current_user.name
     .side_top_icon
       =link_to new_group_path do
         = fa_icon 'edit', class: "fas fa-pen-square"
