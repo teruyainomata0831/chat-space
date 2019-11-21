@@ -263,6 +263,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv
