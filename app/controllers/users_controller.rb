@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    # @users = Room.find(params[:id])
   end
 
   def update
