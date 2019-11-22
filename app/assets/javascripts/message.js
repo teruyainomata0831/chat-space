@@ -32,7 +32,7 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function (messages) {
-        if (Object.keys(message).length !== 0){
+        if (Object.keys(messages).length !== 0){
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildHTML(message);
